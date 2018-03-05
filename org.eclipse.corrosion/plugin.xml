@@ -296,6 +296,11 @@
             id="org.eclipse.corrosion.commands.Implementations"
             name="Implementations">
       </command>
+      <command
+            categoryId="org.eclipse.ui.category.file"
+            id="org.eclipse.corrosion.command2"
+            name="Rust Project">
+      </command>
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
@@ -355,5 +360,22 @@
                label="Toggle Breakpoint">
          </action>
       </editorContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.importWizards">
+      <wizard
+            category="org.eclipse.corrosion.rust"
+            class="org.eclipse.corrosion.wizards.imports.CargoImportWizard"
+            icon="icons/cargo.png"
+            id="org.eclipse.corrosion"
+            name="Cargo Project">
+         <description>
+            Import an existing Cargo Project
+         </description>
+      </wizard>
+      <category
+            id="org.eclipse.corrosion.rust"
+            name="Rust">
+      </category>
    </extension>
 </plugin>
