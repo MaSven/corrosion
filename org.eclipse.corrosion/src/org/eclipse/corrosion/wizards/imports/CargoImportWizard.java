@@ -35,7 +35,6 @@ public class CargoImportWizard extends Wizard implements IImportWizard {
 	 */
 	@Override
 	public void addPages() {
-		// TODO Auto-generated method stub
 		super.addPages();
 		this.addPage(this.cargoImportWizardPage);
 	}
